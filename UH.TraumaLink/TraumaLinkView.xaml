@@ -1,0 +1,28 @@
+﻿<Window x:Class="UH.TraumaLink.TraumaLinkView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UH.TraumaLink"
+        Title="Trauma Link Patient"            
+        SizeToContent="WidthAndHeight"  
+        WindowStartupLocation="CenterScreen" 
+        mc:Ignorable="d" MinWidth="450" >
+    <Grid Name="RootGrid" Margin="0,0,0,0">
+        <DockPanel LastChildFill="False" Margin="0">
+            <!-- Main Panel with list and filters as well as instructions -->
+            <StackPanel DockPanel.Dock="Top">
+                <TextBlock TextWrapping="Wrap" FontWeight="Bold" Name="HeaderTextBlock" Margin="5,2,5,5" Text="Select a Linked Patient:"></TextBlock>
+                <TextBlock TextWrapping="Wrap" FontWeight="Bold" Name="CurrentPtTextBlock" Margin="5,2,5,5" Text="Current Patient Name here:"></TextBlock>
+                <ListView Name="LinkedPatientsListView" Margin="5,10,10,10" MinHeight="30" MouseDoubleClick="LinkedPatientsListView_MouseDoubleClick" Loaded="listView_Loaded"/>
+            </StackPanel>
+
+            <!-- Bottom Panel Buttons and version -->
+            <Grid DockPanel.Dock="Bottom" Margin="0"  Height="Auto" VerticalAlignment="Bottom">
+                <Label x:Name="VersionLabel" Content="Version" VerticalAlignment="Top" Height="Auto" FontSize="10" HorizontalAlignment="Left"/>
+                <Button x:Name="OkButton" Content="OK"  Height="25" Width="100" IsDefault="True" FontWeight="Bold" Margin="0,6,115,6" HorizontalAlignment="Right"  Click="SetNewContext"/>
+                <Button x:Name="CancelButton"  Content="Cancel" Height="25" Width="100" IsCancel="True" FontWeight="Bold" Margin="0,0,10,0" HorizontalAlignment="Right"  Click="Cancel" />
+            </Grid>
+        </DockPanel>
+    </Grid>
+</Window>
