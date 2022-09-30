@@ -2,7 +2,7 @@
 
 namespace UH.TraumaLink
 {
-    class ColumnList : List<Column>
+    public class ColumnList : List<Column>
     {
         public void Add(string name, string header, int columnWidth, FilterType filter,
             string filterLabel, int filterLabelWidth, int filterControlWidth, int filterMarginLeft)

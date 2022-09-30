@@ -57,6 +57,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AssemblyFileVersion.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data Access\DataAccessSQL.cs" />
+    <Compile Include="Data Access\ErrorLog.cs" />
     <Compile Include="View\EpicCutoverTabView.xaml.cs">
       <DependentUpon>EpicCutoverTabView.xaml</DependentUpon>
     </Compile>
@@ -86,7 +88,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Commands\" />
-    <Folder Include="Data Access\" />
     <Folder Include="Model\Observable Base\" />
     <Folder Include="Model\Observable model\" />
     <Folder Include="Resources\" />

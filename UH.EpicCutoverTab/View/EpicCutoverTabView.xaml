@@ -6,7 +6,24 @@
         xmlns:local="clr-namespace:UH.EpicCutoverTab"
         mc:Ignorable="d"
         Title="EpicCutoverTabView" Height="450" Width="800">
-    <Grid>
-        
+
+    <!-- Window Root edges -->
+    <Grid Name="RootGrid" Margin="0,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" MinHeight="68" />
+            <RowDefinition Height="Auto" MinHeight="96" />
+            <RowDefinition Height="Auto" MinHeight="79"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" MinWidth="178" />
+            <ColumnDefinition Width="Auto" MinWidth="153" />
+            <ColumnDefinition Width="Auto" MinWidth="159" />
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="48" Stroke="Black" VerticalAlignment="Top" Width="158" Margin="10,10,0,0"/>
+        <Rectangle Grid.Column="1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="48" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="133"/>
+        <Rectangle Grid.Column="2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="48" Margin="23,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="76" Margin="10,10,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="158"/>
     </Grid>
 </Window>

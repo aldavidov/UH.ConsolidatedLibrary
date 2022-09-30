@@ -32,7 +32,29 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Eclipsys.Clinicals.Context">
+      <HintPath>C:\Program Files (x86)\Allscripts Sunrise\Clinical Manager Client\7.4.6834.0\Eclipsys.Clinicals.Context.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectsPlusXA.Common">
+      <HintPath>C:\Program Files (x86)\Allscripts Sunrise\Clinical Manager Client\7.4.6834.0\ObjectsPlusXA.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectsPlusXA.SCM">
+      <HintPath>C:\Program Files (x86)\Allscripts Sunrise\Clinical Manager Client\7.4.6834.0\ObjectsPlusXA.SCM.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectsPlusXA.SCM.Common">
+      <HintPath>C:\Program Files (x86)\Allscripts Sunrise\Clinical Manager Client\7.4.6834.0\ObjectsPlusXA.SCM.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectsPlusXA.SCM.Forms">
+      <HintPath>C:\Program Files (x86)\Allscripts Sunrise\Clinical Manager Client\7.4.6834.0\ObjectsPlusXA.SCM.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="SCMLib">
+      <HintPath>C:\Program Files (x86)\Allscripts Sunrise\Clinical Manager Client\SCMLib.dll</HintPath>
+    </Reference>
+    <Reference Include="SCMLib.Context">
+      <HintPath>C:\Program Files (x86)\Allscripts Sunrise\Clinical Manager Client\SCMLib.Context.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,6 +75,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AssemblyFileVersion.tt</DependentUpon>
     </Compile>
+    <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="Data Access\DataAccessSQL.cs" />
+    <Compile Include="Data Access\ErrorLog.cs" />
+    <Compile Include="Data Access\TableToObjectConverter.cs" />
+    <Compile Include="Model Observable\Base\BaseModelWrapper.cs" />
+    <Compile Include="Model Observable\Base\ChangeTrackingCollection.cs" />
+    <Compile Include="Model Observable\Base\IValidatableTrackingObject.cs" />
+    <Compile Include="Model Observable\Base\NotifyDataErrorInfoBase.cs" />
+    <Compile Include="Model Observable\ObservableProvider.cs" />
+    <Compile Include="Model Observable\ObservableSpecialty.cs" />
+    <Compile Include="Model Observable\ObservableUserListItem.cs" />
+    <Compile Include="Model\ProfileToolSettings.cs" />
+    <Compile Include="Model\Provider.cs" />
+    <Compile Include="Model\Specialty.cs" />
+    <Compile Include="Model\UserListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -66,6 +103,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Value Converters\TextContainSearch.cs" />
+    <Compile Include="Value Converters\TextToBooleanConverter.cs" />
+    <Compile Include="View Model\Observable.cs" />
+    <Compile Include="View Model\ProviderSearchViewModel.cs" />
+    <Compile Include="View Model\UserProfileToolViewModel.cs" />
     <Compile Include="View\ProviderSearchView.xaml.cs">
       <DependentUpon>ProviderSearchView.xaml</DependentUpon>
     </Compile>
@@ -82,13 +124,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Commands\" />
-    <Folder Include="Data Access\" />
-    <Folder Include="Model Observable\" />
-    <Folder Include="Model\" />
     <Folder Include="Resources\" />
-    <Folder Include="Value Converters\" />
-    <Folder Include="View Model\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AssemblyFileVersion.tt">

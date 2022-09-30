@@ -76,11 +76,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Column.cs" />
-    <Compile Include="ColumnList.cs" />
+    <Compile Include="Model\Column.cs" />
+    <Compile Include="Model\ColumnList.cs" />
     <Compile Include="Data Access\DataAccess.cs" />
     <Compile Include="Data Access\ErrorLog.cs" />
-    <Compile Include="FilterType.cs" />
+    <Compile Include="Model\FilterType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
